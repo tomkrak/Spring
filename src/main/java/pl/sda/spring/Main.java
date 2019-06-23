@@ -1,24 +1,22 @@
 package pl.sda.spring;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello Spring!");
+        ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
-        Object someBean = context.getBean("someBean");
-        SomeBean someBean1 = context.getBean("someBean", SomeBean.class);
-        SomeBean2 someBean2 = context.getBean("someBeanTwo", SomeBean2.class);
-        SomeBean3 someBean3 = context.getBean("someBeanThree", SomeBean3.class);
+        Knight someKnight = context.getBean("someKnight1", Knight.class);
+        someKnight.doQuest();
 
-        System.out.println(someBean);
-        System.out.println(someBean1);
-        System.out.println(someBean2);
-        System.out.println(someBean3);
+        for (int i = 0; i < 100; i++) {
+            Knight someKnight1 = context.getBean("someKnight1", Knight.class);
+            System.out.println(someKnight1);
+            someKnight.doQuest();
 
-
+        }
 
     }
 }
