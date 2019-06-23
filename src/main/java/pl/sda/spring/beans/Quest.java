@@ -1,4 +1,4 @@
-package pl.sda.spring;
+package pl.sda.spring.beans;
 
 public interface Quest {
 

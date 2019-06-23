@@ -1,8 +1,7 @@
-package pl.sda.spring;
+package pl.sda.spring.beans;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 
 import java.util.ArrayList;

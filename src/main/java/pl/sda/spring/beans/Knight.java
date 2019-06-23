@@ -1,10 +1,4 @@
-package pl.sda.spring;
-
-import lombok.ToString;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Scope;
-
-import java.util.Random;
+package pl.sda.spring.beans;
 
 public class Knight {
 
