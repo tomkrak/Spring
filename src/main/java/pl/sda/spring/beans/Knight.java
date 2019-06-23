@@ -1,6 +1,6 @@
 package pl.sda.spring.beans;
 
-public class Knight {
+public abstract class Knight {
 
     private Quest quest;
 
